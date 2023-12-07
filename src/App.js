@@ -1,32 +1,13 @@
 import React from 'react';
-import './App.css';
-import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  Route,
-  RouterProvider,
-} from 'react-router-dom';
-import Greeting from './components/greetings';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Greeting from './components/Greeting';
 
-const router = createBrowserRouter(createRoutesFromElements(
-  <Route index element={<Greeting />} />,
-));
-
-function App() {
-  return <RouterProvider router={router} />;
-}
+const App = () => (
+  <Router>
+    <Routes>
+      <Route path="/" element={<Greeting />} />
+    </Routes>
+  </Router>
+);
 
 export default App;
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import { Provider } from 'react-redux';
-// import store from './store/createStore'; 
-
-// import Greeting from './components/greetings';
-
-// ReactDOM.render(
-//   <Provider store={store}>
-//     <Greeting />
-//   </Provider>,
-//   document.getElementById('root')
-// );
