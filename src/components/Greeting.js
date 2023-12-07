@@ -23,10 +23,12 @@ const Greeting = () => {
     );
   }
 
-  return <div>
-    <h1>Greetings</h1>
-    <p>{message}</p>
-    </div>;
+  return (
+    <div>
+      <h1>Greetings</h1>
+      <p>{message}</p>
+    </div>
+  );
 };
 
 export default Greeting;
